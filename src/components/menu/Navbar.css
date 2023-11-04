@@ -1,0 +1,48 @@
+/* Navbar.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Background color for the Navbar */
+  color: #000; /* Text color for the Navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  z-index: 999; /* Ensure the Navbar is on top of other elements */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 60px;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000; /* Text color for the logo */
+  margin-left: 100px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-right: 120px;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000; /* Text color for the links */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+  color: #f00; /* Change the color for the active link */
+}
