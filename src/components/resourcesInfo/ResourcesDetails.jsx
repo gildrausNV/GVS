@@ -1,3 +1,4 @@
+import DeltaTCalculator from './DeltaTCalculator';
 import './ResourcesInfo.css';
 
 const ResourcesDetails = ({ resource }) => {
@@ -10,6 +11,7 @@ const ResourcesDetails = ({ resource }) => {
           <p>{resource.description}</p>
         </div>
       )}
+      <DeltaTCalculator />
     </div>
   );
 };
