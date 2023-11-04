@@ -7,8 +7,11 @@ import mobileRectifiers from "./mobile-rectifiers.jpg";
 import switchingSystems from "./switching-systems.jpg";
 import lawfulInterception from "./lawful-interception.png";
 import softSwitches from "./soft-switches.jpg";
+import { useNavigate } from "react-router";
 
 const Products = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="products">
       <div className="products-content">
@@ -78,27 +81,27 @@ const Products = () => {
         </p>
 
         <div className="product-images">
-          <div className="product-image">
+          <div className="product-image" onClick={() => navigate('/product/2')}>
             <img src={powerSupplySystem} alt="Power supply systems" />
             <p>Power supply systems</p>
           </div>
-          <div className="product-image">
+          <div className="product-image" onClick={() => navigate('/product/1')}>
             <img src={mobileRectifiers} alt="Mobile rectifiers" />
             <p>Mobile rectifiers</p>
           </div>
-          <div className="product-image">
+          <div className="product-image" onClick={() => navigate('/product/powerSupplyModule')}>
             <img src={powerSupplyModule} alt="Power supply modules" />
             <p>Power supply modules</p>
           </div>
-          <div className="product-image">
+          <div className="product-image" onClick={() => navigate('/product/4')}>
             <img src={switchingSystems} alt="Switching systems" />
             <p>Switching systems</p>
           </div>
-          <div className="product-image">
+          <div className="product-image" onClick={() => navigate('/product/3')}>
             <img src={lawfulInterception} alt="Lawful Interception" />
             <p>Lawful Interception</p>
           </div>
-          <div className="product-image">
+          <div className="product-image" onClick={() => navigate('/product/softSwitches')}>
             <img src={softSwitches} alt="Soft Switches" />
             <p>Soft Switches</p>
           </div>

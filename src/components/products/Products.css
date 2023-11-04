@@ -63,7 +63,15 @@ h3 {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
 }
+
+.product-image:hover {
+  /* background-color: #5a72ff; 
+  transform: scale(1.05);  */
+  cursor: pointer;
+}
+
 
 .product-image img {
   max-width: 100%;

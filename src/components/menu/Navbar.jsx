@@ -6,9 +6,9 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      {/* <Link to="/" className={location.pathname === '/contact' ? 'active' : ''}> */}
+      <Link to="/">
             <h1>GVS</h1>
-          {/* </Link> */}
+          </Link>
       <ul className="nav-links">
         <li>
           <h4>Serbian</h4>
