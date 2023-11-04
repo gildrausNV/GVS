@@ -5,8 +5,11 @@ import pdf from "./pdf.png";
 import formula from "./erlangb_formula.png";
 import solenoid_aksijalni from "./solenoid_aksijalni.png";
 import solenoid_radijalni from "./solenoid_radijalni.jpg";
+import { useNavigate } from "react-router";
 
 const Resources = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="resources">
       <div className="resources-content">
@@ -25,7 +28,7 @@ const Resources = () => {
         </p>
 
         <div className="tools-container">
-          <div className="tool">
+          <div className="tool" onClick={() => navigate('/resource/1')}>
             <div className="tool-text">
               <p>Axial coil (solenoid) calculation worksheet</p>
               <p>Tool for calculating axial coil (solenoid) parameters.</p>
@@ -34,7 +37,7 @@ const Resources = () => {
               <img src={solenoid_aksijalni} alt="img" className="tool-image" style={{width: '300px'}}/>
             </div>
           </div>
-          <div className="tool"><div className="tool-image">
+          <div className="tool" onClick={() => navigate('/resource/2')}><div className="tool-image">
               <img src={solenoid_radijalni} alt="img" className="tool-image" style={{height: '200px'}}/>
             </div>
             <div className="tool-text">
@@ -43,7 +46,7 @@ const Resources = () => {
             </div>
             
           </div>
-          <div className="tool">
+          <div className="tool" onClick={() => navigate('/resource/3')}>
             <div className="tool-text">
               <p>Erlang B formula calculation worksheet</p>
               <p>

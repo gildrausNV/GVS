@@ -1,0 +1,36 @@
+.resources-info{
+    padding-top: 100px;
+}
+
+.resources-details {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    text-align: center; /* Center the content */
+  }
+  
+  .resources-details h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .resources-details img {
+    max-width: 100%;
+    height: auto;
+    width: 200px; /* Set a fixed width for the image */
+    height: 150px; /* Set a fixed height for the image */
+    margin-top: 10px;
+    display: block; /* Center the image horizontally */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+  
+  .resources-details p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+  /* You can adjust the width and height values as needed to maintain consistency across different images. */
+  
+  

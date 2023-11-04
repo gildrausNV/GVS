@@ -56,6 +56,11 @@ p {
   align-items: center; /* Align tool content vertically in the center */
 }
 
+.tool:hover{
+  cursor: pointer;
+  background-color: #c9cdff;
+}
+
 .tool-text {
   flex: 1; /* Allow text to grow and take up remaining space */
   font-size: 16px;

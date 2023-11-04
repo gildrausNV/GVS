@@ -10,6 +10,7 @@ import Products from "./components/products/Products";
 import Services from "./components/services/Services";
 import Page from "./components/Page";
 import ProductInfo from "./components/productInfo/ProductInfo";
+import ResourcesInfo from "./components/resourcesInfo/ResourcesInfo";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Page />} />
           <Route path="/product/:productId" element={<ProductInfo />} />
+          <Route path="/resource/:resourceId" element={<ResourcesInfo />} />
         </Routes>
       </div>
     </Router>
