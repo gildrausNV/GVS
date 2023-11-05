@@ -5,17 +5,17 @@ import Resources from "./resources/Resources";
 import Services from "./services/Services";
 import Welcome from "./welcome/Welcome";
 
-const Page = () => {
+const Page = ({ t }) => {
   return (
     <>
-      <Welcome />
+      <Welcome t={t}/>
       <div className="page">
-        <Home />
-        <Resources />
-        <Products />
-        <Services />
+        <Home t={t}/>
+        <Resources t={t}/>
+        <Products t={t}/>
+        <Services t={t}/>
       </div>
-      <Contact />
+      <Contact t={t}/>
     </>
   );
 };

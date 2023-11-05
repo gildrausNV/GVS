@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./components/menu/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Home from "./components/home/Home";
 import Contact from "./components/contact/Contact";
 import Welcome from "./components/welcome/Welcome";
@@ -12,18 +12,34 @@ import Page from "./components/Page";
 import ProductInfo from "./components/productInfo/ProductInfo";
 import ResourcesInfo from "./components/resourcesInfo/ResourcesInfo";
 
+import { useTranslation } from "react-i18next";
+
+// export const LanguageContext = React.createContext();
+
 function App() {
+  // const [language, setLanguage] = useState("Serbian");
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const lng = navigator.language;
+    i18n.changeLanguage(lng);
+  }, [])
+
+  const lng = navigator.language;
+
   return (
-    <Router>
-      <div className="app">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Page />} />
-          <Route path="/product/:productId" element={<ProductInfo />} />
-          <Route path="/resource/:resourceId" element={<ResourcesInfo />} />
-        </Routes>
-      </div>
-    </Router>
+    // <LanguageContext.Provider value={language}>
+      <Router>
+        <div className="app">
+          <Navbar t={t}/>
+          <Routes>
+            <Route path="/" element={<Page t={t}/>} />
+            <Route path="/product/:productId" element={<ProductInfo t={t}/>} />
+            <Route path="/resource/:resourceId" element={<ResourcesInfo t={t}/>} />
+          </Routes>
+        </div>
+      </Router>
+    // </LanguageContext.Provider>
   );
 }
 

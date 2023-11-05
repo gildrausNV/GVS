@@ -6,7 +6,7 @@ import axialCoil from "../resources/solenoid_aksijalni.png";
 import radialCoil from "../resources/solenoid_radijalni.jpg";
 import erlangBFormula from "../resources/erlangb_formula.png";
 
-const ResourcesInfo = () => {
+const ResourcesInfo = ({ t }) => {
     const [resources, setResources] = useState([
         {
             id: 1,
@@ -40,7 +40,7 @@ const ResourcesInfo = () => {
 
     return ( 
         <div className="resources-info">
-            <ResourcesDetails resource={resource}/>
+            <ResourcesDetails resource={resource} t={t}/>
         </div>
      );
 }

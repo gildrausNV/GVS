@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 
-const Home = () => {
+const Home = ({ t }) => {
     const sections = [
         {
             title: 'Our Mission',
@@ -9,7 +9,7 @@ const Home = () => {
         },
         {
             title: 'Company Overview',
-            content: "Business policy of GVS is openness for all modes of cooperation. GVS products are a result of in-house development based on original and innovative solutions. GVS has product lines for high-volume production of electronic assemblies and equipment for accompanying and field activities. Special attention is paid to work processes, especially quality assurance and development process. ",
+            content: 'Business policy of GVS is openness for all modes of cooperation. GVS products are a result of in-house development based on original and innovative solutions. GVS has product lines for high-volume production of electronic assemblies and equipment for accompanying and field activities. Special attention is paid to work processes, especially quality assurance and development process.',
         },
         {
             title: 'Research and Development',
@@ -23,12 +23,12 @@ const Home = () => {
 
     return (
         <div className="home">
-            <h1>GVS company</h1>
+            <h1 style={{ color: 'black' }}>{t('GVS')}</h1>
             <div className="carousel">
                 {sections.map((section, index) => (
                     <div key={index} className="section">
-                        <h2>{section.title}</h2>
-                        <p>{section.content}</p>
+                        <h2>{t(section.title)}</h2>
+                        <p>{t(section.content)}</p>
                     </div>
                 ))}
             </div>

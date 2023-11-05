@@ -9,7 +9,7 @@ import switchingSystems from "../products/switching-systems.jpg";
 import lawfulInterception from "../products/lawful-interception.png";
 import softSwitches from "../products/soft-switches.jpg";
 
-const ProductInfo = () => {
+const ProductInfo = ({ t }) => {
   const [products, setProducts] = useState([
     {
         id: 1,
@@ -167,9 +167,9 @@ const ProductInfo = () => {
 
   return (
     <div className="product-info">
-      <h1>Product Information</h1>
+      <h1>{t('Product Information')}</h1>
       {product && 
-        <ProductDetails product={product}/>
+        <ProductDetails product={product} t={t}/>
       }
     </div>
   );

@@ -1,20 +1,31 @@
-import './Navbar.css';
-import { Link, useLocation } from 'react-router-dom';
+import "./Navbar.css";
+import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-const Navbar = () => {
+const Navbar = ({ t }) => {
   const location = useLocation();
+  const { i18n } = useTranslation();
+
+  // Function to change the language
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <div className="navbar">
       <Link to="/">
-            <h1>GVS</h1>
-          </Link>
+        <h1>{t("GVS")}</h1>
+      </Link>
       <ul className="nav-links">
         <li>
-          <h4>Serbian</h4>
+          <button className="nav-button" onClick={() => changeLanguage("sr")}>
+            {t("Serbian")}
+          </button>
         </li>
         <li>
-          <h4>English</h4>
+          <button className="nav-button" onClick={() => changeLanguage("en")}>
+            {t("English")}
+          </button>
         </li>
       </ul>
     </div>

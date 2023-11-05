@@ -1,14 +1,14 @@
 import DeltaTCalculator from './DeltaTCalculator';
 import './ResourcesInfo.css';
 
-const ResourcesDetails = ({ resource }) => {
+const ResourcesDetails = ({ resource, t }) => {
   return (
     <div className="resources-details">
       {resource && (
         <div>
-          <h2>{resource.name}</h2>
+          <h2>{t(resource.name)}</h2>
           <img src={resource.image} alt={resource.name} />
-          <p>{resource.description}</p>
+          <p>{t(resource.description)}</p>
         </div>
       )}
       <DeltaTCalculator />

@@ -2,7 +2,7 @@
 import React from 'react';
 import './ProductInfo.css';
 
-const ProductDetails = ({ product }) => {
+const ProductDetails = ({ product, t }) => {
   return (
     <div className="product-details">
       <div className="product-name">{product.name}</div>
@@ -11,31 +11,31 @@ const ProductDetails = ({ product }) => {
             <img src={product.image} alt={product.name} />
         </div>
         <div className="product-description">
-          {product.description}
+          {t(product.description)}
         </div>
       </div>
       <div className="product-attributes">
         <div className="attribute">
-          <h3>Features</h3>
+          <h3>{t('Features')}</h3>
           <ul>
             {product.features.map((feature, index) => (
-              <li key={index}>{feature}</li>
+              <li key={index}>{t(feature)}</li>
             ))}
           </ul>
         </div>
         <div className="attribute">
-          <h3>Applications</h3>
+          <h3>{t('Applications')}</h3>
           <ul>
             {product.applications.map((application, index) => (
-              <li key={index}>{application}</li>
+              <li key={index}>{t(application)}</li>
             ))}
           </ul>
         </div>
         <div className="attribute">
-          <h3>Benefits</h3>
+          <h3>{t('Benefits')}</h3>
           <ul>
             {product.benefits.map((benefit, index) => (
-              <li key={index}>{benefit}</li>
+              <li key={index}>{t(benefit)}</li>
             ))}
           </ul>
         </div>

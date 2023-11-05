@@ -1,0 +1,131 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+
+i18n
+  // detect user language
+  // learn more: https://github.com/i18next/i18next-browser-languageDetector
+  .use(LanguageDetector)
+  // pass the i18n instance to react-i18next.
+  .use(initReactI18next)
+  // init i18next
+  // for all options read: https://www.i18next.com/overview/configuration-options
+  .init({
+    // lng: 'sr',
+    debug: true,
+    fallbackLng: 'rs',
+    detection: {
+        order: ['htmlTag', 'cookie', 'localStorage', 'path', 'subdomain'],
+        caches: ['cookie']
+    },
+    interpolation: {
+      escapeValue: false, // not needed for react as it escapes by default
+    },
+    resources: {
+      rs: {
+        translation: {
+          "GVS": "ГВС",
+          "GVS performs research, development, production & engineering in the field of electronics. GVS was founded 1988 in Belgrade. Basic activity is electronic equipment for communications, power supply systems and real-time control systems. With its products, GVS offers a full range of services with complete turn-key solutions. GVS products and services are of the highest quality.": "ГВС се бави истраживањем, развојем, производњом и инжењерингом у области електронике. Основан је 1988. године у Београду. Основни предмет делатности је професионална опрема у области комуникација, система за напајање и система за управљање у реалном времену. Уз своје производе ГВС нуди пун спектар пратећих услуга укључујући и потпуни инжењеринг по систему ”кључ у руке”. Производи и услуге ГВС-а су врхунског квалитета.",
+          'Our Mission': 'Мисија',
+          'GVS mission is to create highly dependable electronic systems that are easy to reason about, despite their essential complexity.': 'Мисија ГВС-а је да стварамо високо поуздане електронске системе који су лако разумљиви, упркос њиховој суштинској сложености.',
+          'Company Overview':'Компанија',
+          'Business policy of GVS is openness for all modes of cooperation. GVS products are a result of in-house development based on original and innovative solutions. GVS has product lines for high-volume production of electronic assemblies and equipment for accompanying and field activities. Special attention is paid to work processes, especially quality assurance and development process.':'Пословна политика ГВС-а је отвореност за све видове сарадње. Производи ГВС-а су резултат сопственог развоја заснованог на оригиналним и иновативним решењима. ГВС располаже линијама за великосеријску производњу електронских склопова као и опремом за пратеће и теренске активности. Посебна пажња је посвећена радним процесима, пре свега контроли квалитета и развојном процесу.',
+          'Research and Development':'Истраживање и развој',
+          'Research & development center has a history as long as GVS itself and deep understanding of distributed systems, time sensitive networks, secure communications, high-efficiency power conversion and many other.':'Истраживачко-развојни центар постоји од оснивања ГВС-а и влада технологијама дистрибуираних система, временски критичних мрежа, безбедних комуникација, енергетске електронике високе ефикасности и многим другим.',
+          'Environment':'Животна средина',
+          'GVS actively demonstrates its commitment to the environment by selecting ecologically safe technologies and detailed automated inspection of all materials that are transferred from GVS to the environment.':'Осим избором еколошки чистих технологија, ГВС чува животну средину и детаљном аутоматизованом контролом свих материја које из система излазе у окружење, по објективним мерилима.',
+          'Resources':'Ресурси',
+          'These resources are used by GVS experts and associates, and GVS decided to make them publicly available. They come with no guarantees or obligations from GVS. GVS will try to address any issues that users may have with these resources.':'',
+          'Engineering Tools':'Инжењерски алати',
+          'These tools are utilities for engineers. All tools are free to use for commercial, closed and non-commercial projects without restriction.':'Алати и подаци представљају помоћна средства за рад инжењера. Сви алати су слободни за употребу у комерцијалним, затвореним и не-комерцијалним пројектима без ограничења.',
+          'Axial coil (solenoid) calculation worksheet':'Алат за рачун параметара аксијалног соленоида',
+          'Radial coil (solenoid) calculation worksheet':'Алат за рачун параметара радијалног соленоида',
+          'Erlang B formula calculation worksheet':'Алат за рачун Ерлангове Б формуле саобраћаја',
+          'Technical Articles':'Стручни чланци',
+          'Technical articles from GVS experts are listed in the table below. The content of the articles is published under the Creative Commons CC-BY-SA 4.0 license, which means it is free to copy, distribute, and display and make derivative works or remixes if they give GVS the credits and if the distribution of such works is distributed under identical to or not more restrictive than CC-BY-SA 4.0. Use for commercial purposes is allowed under the same conditions.':'Технички чланци ГВС-ових стручњака су дати у табели испод. Садржај чланака је објављен под Creative Commons CC-BY-SA 4.0 лиценцом, што значи да је слободан за умножавање, дистрибуцију и јавно саопштавање дела и прераде, ако се наведе извор и ако се прерада дистрибуира под истом или сличном лиценцом. Дозвољена је и комерцијална употреба дела и прераде под истим условима.',
+          'Products':'Производи',
+          'GVS products are highly dependable complex electronic systems. We see Dependability as a measure of how advisable is it to depend on the system. We cherish the traditional view of dependability as a combination of:':'Водећи производи ГВС-а су сложени професионални електронски системи високе поузданости. Под високом поузданошћу подразумевамо меру колико је препоручљиво ослонити се на систем. Негујемо традиционални поглед на високу поузданост система као комбинацију базичних одлика:',
+          'Modern age extended the definition of dependability with additional requirements:':'У савремено доба висока поузданост неизоставно подразумева и додатне одлике:',
+          'GVS products fulfill relevant international standards (ITU-T, ISO, IEC), European (ETSI, ECMA), and national standards. Standard options include Serbian, English, and Russian language. GVS products are designed for easy localization to other languages. GVS products are accompanied with detailed technical documentation on the highest level.':'ГВС производи задовољавају одговарајуће светске (ITU-T, ISO, IEC), европске (ETSI, ECMA) и националне стандарде. Производи се стандардно раде у варијантама на српском, енглеском и руском језику, а предвиђени су за ефикасну локализацију и за друга језичка подручја. Производи ГВС-а су праћени детаљном техничком документацијом на највишем нивоу.',
+          'Services':'Услуге',
+          'GVS products are offered to customers supported by a full line of accompanying services, covering the complete product life-cycle. Our services cut expenses and shorten product startup time. GVS also provides R&D services in its areas of expertise.':'Корисницима својих производа ГВС нуди пун спектар пратећих услуга које покривају читав животни циклус производа. Услуге ГВС система смањују трошкове и скраћују време увођења производа у експлоатацију. ГВС такође нуди услуге истраживања и развоја у својим областима деловања и стручности.',
+          'Product related services':'Пратеће услуге уз производе',
+          'Alongside its products, GVS provides the services which can be grouped into: customer support and engineering services.':'Уз своје производе ГВС нуди одговарајуће услуге које могу да се групишу у две групе: корисничка подршка и инжењеринг.',
+          'Product related services are available throughout the product life-cycle.':'Расположивост пратећих услуга током животног циклуса производа.',
+          'R&D Services':'Истраживачко развојне услуге',
+          'Product Development':'Развој електронике',
+          'Software Development':'Програмска подршка',
+          'We offer R&D services for electronic products and systems completely led by technical specifications from the customer. Electronic hardware development, both analog and digital, microprocessor controlled systems, power converters and RF units. IP design for FPGA, both purely digital and mixed analog-digital programmable components. We develop firmware with optional formal verification, with a vast field-proven library of in-house developed re-usable modules.':'Нудимо услуге развоја електронских производа и система у потпуности по техничким спецификацијама наручиоца. Развој електронских склопова у области аналогне и дигиталне електронике, микропроцесорских управљачких система, претварача снаге и РФ кола. Дизајн за програмабилна логичка кола (енг. FPGA), како за дигитална, тако и за комбинована аналогно-дигитална програмабилних кола. Развијамо угњеждене програме (енг. firmware) уз формалну верификацију или без ње. Располажемо са богатом библиотеком сопствених модула доказаних у раду на терену.',
+          'We offer R&D services for electronic products and systems completely led by technical specifications from the customer.':'Нудимо услуге развоја електронских производа и система у потпуности по техничким спецификацијама наручиоца.',
+          'Electronic hardware development, both analog and digital, microprocessor controlled systems, power converters and RF units.':'Развој електронских склопова у области аналогне и дигиталне електронике, микропроцесорских управљачких система, претварача снаге и РФ кола.',
+          'IP design for FPGA, both purely digital and mixed analog-digital programmable components.':'Дизајн за програмабилна логичка кола (енг. FPGA), како за дигитална, тако и за комбинована аналогно-дигитална програмабилних кола.',
+          'We develop firmware with optional formal verification, with a vast field-proven library of in-house developed re-usable modules.':'Развијамо угњеждене програме (енг. firmware) уз формалну верификацију или без ње. Располажемо са богатом библиотеком сопствених модула доказаних у раду на терену.',
+          'For purely software products, we provide software development services:':'За чисто програмске производе, на располагању су услуге развоја програмске подршке:',
+          'We specialize in the design and implementation of real-time, high reliability, and high availability software.':'Развој програмске подршке ниског нивоа - модули језгра оперативног система, гоничи (енг. driver)',
+          'In software development, we champion an approach which introduces quality in the design and implementation, with strong and “omni-present” QA to prove the quality rate.':'Расподељена (енг. distributed) програмска подршка, са отпорношћу на отказе појединих програма',
+          'We have vast experience in HW/SW co-design and co-verification, which enables the development of highly integrated and robust products and systems.':'Програмска подршка високе поузданости и расположивости, праћена одговарајућом контролом квалитета у свим фазама развоја',
+          'Warranty period usually starts at product acceptance and may be different for each product installation. Relating to product lifecycle, the warranty period is negotiable.':'Гарантни период је временски период унутар фазе матичне или продужене подршке који почиње од тренутка пуштања система у рад, а трајање је предмет договора.',
+          'Product lifecycle spans from the start of product sales until the last product of that type is in service. Each installation of a product lives its own service life, which lasts from installation to deinstallation. Product lifecycle refers to product type, meaning all installations of a certain product.':'Животни циклус система обухвата период од стављања система у продају до демонтаже последњег система из експлоатације. Свака појединачна инсталација система има свој животни век који називамо "експлоатациони век". Животни циклус неке верзије система се односи на све инсталације те верзије система.',
+          'Service life starts at takeover. During the service life, the customer enjoys support services, depending on the current product lifecycle phase.': 'Примопредајом система почиње експлоатациони век. Током експлоатационог века, кориснику су на располагању услуге подршке, зависно од фазе животног циклуса у којој се систем налази.',
+          'Declaration of "End of Support" doesn\'t mean that the product and customers still using the product are forgotten. After support has ended, GVS makes available resources enabling the customer himself or third parties to continue supporting the product. This phase is thus referred to as "Self-support."':'Крај фазе подршке не значи да је систем заборављен. Од краја подршке трајно су на слободном располагању садржаји који омогућавају кориснику или трећим лицима да пружају подршку систему, па се ова фаза назива "самоуслужна подршка".',
+          'There are four phases in the product lifecycle:':'Постоје 4 фазе подршке и то су:',
+          'Mainstream support phase':'Фаза матичне подршке',
+          'Product is actively developed':'Траје док се систем развија и укључује гарантни период',
+          'Extended support phase':'Фаза продужене подршке',
+          'From "End of Development" until declared "End of Life"':'Траје до објаве краја живота система',
+          'Maintenance phase':'Фаза одржавања',
+          'Repair service and spare parts are available, software is actively maintained':'Током које је на располагању поправка замењивих делова и резервни делови, најчешће траје 10 година од објаве краја живота',
+          'Support phase':'Фаза подршке',
+          'GVS service center does not provide repair services, but offers technical support to customers or third parties providing those services':'Фаза подршке током које сервисни центар више не нуди услуге одржавања, али ГВС пружа подршку корисницима или трећим лицима у обављању одржавања',
+          'Customer support services include:':'У групу услуга корисничке подршке спадају:',
+          'Technical support':'Техничка подршка',
+          'Training':'Обука',
+          'Hardware maintenance':'Одржавање електронске опреме',
+          'Software maintenance':'Одржавање програмска',
+          'Engineering services are:':'У групу инжењеринг услуга спадају:',
+          'Installation':'Монтажа',
+          'Putting into operation':'Пуштање у рад',
+          'Planning':'Планирање',
+          'Engineering':'Пројективање',
+          'Upgrading':'Унапређења ',
+          'Uninstallation':'Демонтажа',
+          'Title':'Наслов',
+          'Pages':'Страна',
+          'Format':'Формат',
+          'Asymmetric/polling Alternating Bit Protocol':'Асиметрични протокол извртљивог бита',
+          'Testing w/100% coverage is not enough':'Тестирање са 100% покривености није довољно',
+          'Stopping the Short-Circuit Fault Spreading in DC Distribution Systems':'Основни начини за спречавање утицаја кратког споја на једном потрошачу на остале потрошаче система',
+          'High Availability':'Висока расположивост (енг. availability)',
+          'High Reliability':'Висока поузданост (енг. reliability)',
+          'High Maintainability':'Висока поправљивост (енг. maintainability)',
+          'High Safety':'Висока сигурност (енг. safety)',
+          'High Durability':'Висока постојаност (енг. durability)',
+          'Remains functional in unfavorable conditions (without or with minimal repair)':'Висока безбедност (енг. security)',
+          'Operational anytime you need it (zero or with minimal downtime)':'У радном стању кад затреба (не испада из погона)',
+          'Operates within specification (never fails to operate as expected)':'Ради по спецификацијама (никада не закаже / не греши)',
+          'Easy to repair (easy to restore the initial level of dependability)':'У случају квара, квар је лако отклонити и вратити предвиђени ниво поузданости',
+          'Not dangerous to user(s) or environment in all conditions, including fault':'Безопасан по људе и околину у свим условима и у квару',
+          'Remains functional in unfavorable conditions (without or with minimal repair)':'Остаје у радном стању у неповољним условима',
+          'Resistant to malice, corruption or misuse':'Отпоран на злонамерност, неспособност или нестручност',
+          'Power supply systems':'Системи напајања',
+          'Mobile rectifiers':'Преносни исправљачи',
+          'Power supply modules':'Исправљачке јединице',
+          'Switching systems':'Комутациони системи',
+          'Lawful Interception':'Законито пресретање',
+          'Soft Switches':'Пакетски комутатори',
+          'Contact':'Контакт',
+          'Contact Information':'Контакт информације',
+          'Phone':'Тел. ',
+          'Headquarters':'Седиште',
+          'Belgrade':'Београд',
+          'Serbia':'Србија',
+          'Niš Branch':'Огранак Ниш',
+          'Niš':'Ниш',
+          'Moscow Office':'Представништво Москва',
+          'Moscow':'Москва',
+        }
+      },
+    }
+  });
+
+export default i18n;
